@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Project Magang App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Diskominfo Kota Jambi</string>
+    <string name="nav_header_desc">Diskominfo Kota Jambi</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="start">Start</string>
+    <string name="start_text_advice">By continuing on this application you agree to our Terms of Use and Privacy Policy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_onboarding_1">Selamat Datang di SI Apps</string>
+    <string name="description_onboarding_1"><![CDATA[Di aplikasi ini anda akan mendapat kan beberapa informasi tentang kominfo jambi.]]></string>
+    <string name="title_onboarding_2">Kominfo Kota Jambi</string>
+    <string name="description_onboarding_2"><![CDATA[Aplikasi yang didesain untuk warga jambi yang ingin mencari informasi tentang kominfo jambi.]]></string>
+    <string name="title_onboarding_3">lorem ipsum dolor sit amet</string>
+    <string name="description_onboarding_3"><![CDATA[Aplikasi ini dibuat untuk mempermudah warga jambi dalam mencari informasi tentang kominfo jambi.]]></string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="flt_button">Floating Button</string>
+    <string name="toolbar_image_desc">AppBarImage</string>
+    <string name="Welcome_Text">Selamat datang di\nDiskominfo Kota Jambi</string>
+    <string name="Visi_misi">Visi dan Misi</string>
+    <string name="Struktur_organisasi">Struktur Organisasi</string>
+    <string name="bg_home">bg_gradient</string>
+    <string name="News">Berita</string>
+    <string name="open_berita"><![CDATA[Tampilkan Lebih Banyak >>]]></string>
+    <string name="lorem_7">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="tv_visi">“Terselenggaranya jaringan komunikasi dan Informatika yang terintegrasi untuk mendukung terwujudnya Pemerintahan yang baik.”</string>
+    <string name="title_misi">MISI</string>
+    <string name="title_visi">VISI</string>
+    <string name="icon_x">icon x</string>
+    <string name="Copyright">"Copyright © Diskominfo Kota Jambi "</string>
+    <string name="Tv_title_struktur">Struktur Organisasi \nDinas Komunikasi dan Informatika \nKota Jambi</string>
+    <string name="desc_lampiran">
+    \u0020Lampiran \u0020 \u0020 : Peraturan Walikota Jambi\n
+        Nomor \u0020 \u0020 \u0020 \u0020 \u0020: 47 Tahun 2016\n
+    Tentang \u0020 \u0020 \u0020 \u0020: Kedudukan, Susunan \n \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020
+        Organisasi dan Fungsi Serta \n \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020 \u0020  Tata Kerja Komunikasi dan  \n
+        \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 Informatika Kota Jambi
+</string>
+    <string name="Kegiatan">Kegiatan</string>
+    <string name="informasi">informasi</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<!-- res/drawable/background_gradient.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="177"
+                android:startColor="#D6002D85"
+                android:endColor="#4AC0CBDC"
+                android:type="linear"
+                android:gradientRadius="122.87%" />
+        </shape>
+    </item>
+</layer-list>

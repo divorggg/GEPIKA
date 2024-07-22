@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    tools:context=".ui.splash.SplashActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/image_onboarding"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="30dp"
+        android:padding="30dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/text_onboarding_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_developer" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_onboarding_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_onboarding"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:gravity="center"
+        android:text="@string/title_onboarding_1"
+        android:textColor="@color/dark_grey"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/text_onboarding_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_onboarding" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_onboarding_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_onboarding_title"
+        android:layout_margin="30dp"
+        android:gravity="center"
+        android:text="@string/description_onboarding_1"
+        android:textColor="@color/light_grey"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_onboarding_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

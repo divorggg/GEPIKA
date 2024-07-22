@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/LR_Gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/Tv_Galeri_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Galeri"
+                android:textSize="24sp"
+                android:textColor="@color/textcolor"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/linecolor" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_judul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Title"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="28dp"
+            android:layout_margin="16dp"
+            android:padding="8dp"
+            android:maxLines="2"
+            app:layout_constraintTop_toBottomOf="@+id/LR_Gallery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="266dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            app:iss_auto_cycle="true"
+            app:iss_delay="1000"
+            app:iss_period="1000"
+            app:iss_placeholder="@drawable/pic1"
+            app:iss_error_image="@drawable/ic_launcher_background"
+            app:iss_text_align="CENTER"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_judul"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:elevation="4dp" />
+
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/textcolor"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_slider"
+            app:layout_constraintVertical_bias="1.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="32dp">
+
+                <ImageView
+                    android:id="@+id/logo_diskominfo_footer"
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="22dp"
+                    android:contentDescription="@string/bg_home"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/logo_kominfo_full"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="@string/icon_x"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_x"
+                    app:layout_constraintStart_toStartOf="@+id/logo_diskominfo_footer"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_diskominfo_footer"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="23dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_insta"
+                    app:layout_constraintStart_toStartOf="@+id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_diskominfo_footer"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="8dp"
+                    android:contentDescription="TODO"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_yt"
+                    app:layout_constraintEnd_toEndOf="@+id/logo_diskominfo_footer"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_diskominfo_footer" />
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/icon_linkedin"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/logo_diskominfo_footer" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:text="@string/Copyright"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -28,6 +28,11 @@ Selamat datang di **GEPIKA**, aplikasi resmi untuk profil instansi di Kota Jambi
 
 
 1. **Persyaratan Sistem**: Memerlukan Android 7.0 (Nougat) atau yang lebih baru.
+2.  **Unduh Aplikasi**: Aplikasi GEPIKA dapat diunduh melalui Google Play Store atau langsung melalui tautan berikut:
+
+   **[Klik di sini untuk mengunduh aplikasi GEPIKA](https://drive.google.com/uc?export=download&id=1Cm8l81PjylGsI9fGQQIr4Ed0ilfpMNfu)**
+
+
 
 ## Kontribusi
 

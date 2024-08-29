@@ -22,13 +22,12 @@ Selamat datang di **GEPIKA**, aplikasi resmi untuk profil instansi di Kota Jambi
 
 - **Kotlin**: Bahasa pemrograman utama untuk pengembangan aplikasi.
 - **Android SDK**: Untuk membangun aplikasi Android yang responsif dan user-friendly.
-- **Google Maps API**: Untuk integrasi navigasi dan pencarian lokasi.
 - **Glide**: Untuk memuat dan menampilkan gambar dengan efisien.
 
 ## Instalasi
 
-1. **Unduh Aplikasi**: Aplikasi dapat diunduh melalui Google Play Store atau langsung melalui [tautan ini](#).
-2. **Persyaratan Sistem**: Memerlukan Android 7.0 (Nougat) atau yang lebih baru.
+
+1. **Persyaratan Sistem**: Memerlukan Android 7.0 (Nougat) atau yang lebih baru.
 
 ## Kontribusi
 

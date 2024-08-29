@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_Berita_list"
+            android:foreground="@drawable/ripple_effect"
+            android:clickable="true"
+            android:layout_width="325dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewberitalist"
+                    android:layout_width="120dp"
+                    android:layout_height="170dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/ImageView_berita"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/logo_kominfo" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/titleTextView"
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="start"
+                    android:layout_marginStart="8dp"
+                    android:letterSpacing="0.01"
+                    android:maxLines="3"
+                    android:text="Waspada Kasus Rabies, Abu Bakar Imbau Masyarakat Segera Vaksinasi Hewan Peliharaan"
+                    android:textColor="@color/textcolor"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cardViewberitalist"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/descriptionTextView"
+                    android:layout_width="180dp"
+                    android:layout_height="111dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="8dp"
+                    android:gravity="start"
+                    android:textSize="10sp"
+                    android:letterSpacing="0.01"
+                    android:lineSpacingExtra="5sp"
+                    android:fontFeatureSettings="pnum, lnum"
+                    android:text="Kasus masyarakat yang terkena gigitan Hewan Penular Rabies (HPR) marak terjadi disejumlah daerah di Indonesia. Maraknya kasus tersebut, juga mendapat.."
+                    app:layout_constraintBottom_toBottomOf="@+id/cardViewberitalist"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/cardViewberitalist"
+                    app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+</FrameLayout>

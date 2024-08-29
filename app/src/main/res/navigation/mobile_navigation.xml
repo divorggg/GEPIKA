@@ -13,15 +13,35 @@
         <action
             android:id="@+id/action_nav_home_to_nav_gallery"
             app:destination="@id/nav_gallery"
-            app:enterAnim="@anim/animate_fade_enter" />
+            app:enterAnim="@android:anim/fade_in" />
         <action
             android:id="@+id/action_nav_home_to_nav_slideshow"
             app:destination="@id/nav_visi_misi"
-            app:enterAnim="@anim/animate_fade_enter" />
+            app:enterAnim="@android:anim/fade_in" />
         <action
             android:id="@+id/action_nav_home_to_structureFragment"
             app:destination="@id/nav_struktur"
-            app:enterAnim="@anim/animate_fade_enter" />
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_nav_home_to_detailBeritaFragment"
+            app:destination="@id/detailBeritaFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_nav_home_to_beritaFragment"
+            app:destination="@id/beritaFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_nav_home_to_kegiatanFragment"
+            app:destination="@id/kegiatanFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_nav_home_to_detailKegiatanFragment"
+            app:destination="@id/detailKegiatanFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_nav_home_to_bukuPanduanFragment"
+            app:destination="@id/nav_buku_panduan"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
 
     <fragment
@@ -34,10 +54,43 @@
         android:id="@+id/nav_visi_misi"
         android:name="com.example.projectmagangapp.ui.visi_misi.VisiMisiFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_organization" />
+        tools:layout="@layout/fragment_visi_misi" />
     <fragment
         android:id="@+id/nav_struktur"
         android:name="com.example.projectmagangapp.ui.structure.StructureFragment"
         android:label="fragment_structure"
         tools:layout="@layout/fragment_structure" />
+    <fragment
+        android:id="@+id/detailBeritaFragment"
+        android:name="com.example.projectmagangapp.ui.berita.DetailBeritaFragment"
+        android:label="fragment_detail_berita"
+        tools:layout="@layout/fragment_detail_berita" />
+    <fragment
+        android:id="@+id/beritaFragment"
+        android:name="com.example.projectmagangapp.ui.berita.BeritaFragment"
+        android:label="fragment_berita"
+        tools:layout="@layout/fragment_berita" >
+        <action
+            android:id="@+id/action_beritaFragment_to_detailBeritaFragment"
+            app:destination="@id/detailBeritaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kegiatanFragment"
+        android:name="com.example.projectmagangapp.ui.kegiatan.KegiatanFragment"
+        android:label="fragment_kegiatan"
+        tools:layout="@layout/fragment_kegiatan" >
+        <action
+            android:id="@+id/action_kegiatanFragment_to_detailKegiatanFragment"
+            app:destination="@id/detailKegiatanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailKegiatanFragment"
+        android:name="com.example.projectmagangapp.ui.kegiatan.DetailKegiatanFragment"
+        android:label="fragment_detail_kegiatan"
+        tools:layout="@layout/fragment_detail_kegiatan" />
+    <fragment
+        android:id="@+id/nav_buku_panduan"
+        android:name="com.example.projectmagangapp.BukuPanduanFragment"
+        android:label="fragment_buku_panduan"
+        tools:layout="@layout/fragment_buku_panduan" />
 </navigation>

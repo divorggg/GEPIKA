@@ -1,48 +1,84 @@
 <!-- item_view_pager.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="207dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal">
 
-    <Button
-        android:layout_width="12dp"
-        android:layout_height="12dp"
+    <ImageButton
+        android:id="@+id/button_youtube_left"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_gravity="center"
-        android:background="@drawable/icon_arrow_left"
+        android:clickable="true"
         android:backgroundTint="@color/white"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/icon_arrow_left"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
-        android:id="@+id/imageView_youtube"
-        android:layout_width="163dp"
-        android:layout_height="105dp"
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="165dp"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+
+        app:cardCornerRadius="12dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView_youtube"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:foreground="@drawable/ripple_effect"
+                android:layout_gravity="center"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic1"
+                android:background="@drawable/rounded_image"
+                 />
+
+            <ImageView
+                android:id="@+id/imageView_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/img_yt_viewpager" />
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <ImageButton
+        android:id="@+id/button_youtube_right"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_gravity="center"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/pic1"
-        android:background="@drawable/rounded_image"
-        android:padding="2dp" />
-
-    <Button
-        android:layout_width="12dp"
-        android:layout_height="12dp"
-        android:layout_gravity="center"
         android:background="@drawable/icon_arrow_right"
-        android:backgroundTint="@color/white"
-        android:layout_marginEnd="16dp"/>
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/Tv_youtube_title"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="115dp"
         android:layout_gravity="center"
         android:text="@string/lorem_7"
         android:layout_marginEnd="16dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
         android:maxLines="5"
         android:gravity="start"/>
-
-
-
 
 </LinearLayout>

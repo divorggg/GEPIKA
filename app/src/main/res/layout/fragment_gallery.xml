@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- Title Section -->
         <LinearLayout
             android:id="@+id/LR_Gallery"
             android:layout_width="match_parent"
@@ -17,7 +19,10 @@
             android:orientation="horizontal"
             android:paddingStart="24dp"
             android:paddingEnd="24dp"
+            android:layout_marginTop="16dp"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="MissingConstraints">
 
             <TextView
@@ -28,34 +33,34 @@
                 android:textSize="24sp"
                 android:textColor="@color/textcolor"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp" />
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="16dp" />
 
             <View
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="2dp"
                 android:layout_gravity="center"
-                android:layout_marginStart="24dp"
-                android:layout_marginEnd="24dp"
+                android:layout_weight="1"
                 android:background="@color/linecolor" />
         </LinearLayout>
 
+        <!-- Title Section (Subtitle) -->
         <TextView
             android:id="@+id/tv_title_judul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:text="Title"
             android:textStyle="bold"
             android:gravity="center"
-            android:textSize="28dp"
+            android:textSize="28sp"
             android:layout_margin="16dp"
             android:padding="8dp"
             android:maxLines="2"
-            app:layout_constraintTop_toBottomOf="@+id/LR_Gallery"
+            app:layout_constraintTop_toBottomOf="@id/LR_Gallery"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
+        <!-- Image Slider -->
         <com.denzcoskun.imageslider.ImageSlider
             android:id="@+id/image_slider"
             android:layout_width="match_parent"
@@ -65,14 +70,15 @@
             app:iss_auto_cycle="true"
             app:iss_delay="1000"
             app:iss_period="1000"
-            app:iss_placeholder="@drawable/pic1"
+            app:iss_placeholder="@drawable/ic_launcher"
             app:iss_error_image="@drawable/ic_launcher_background"
             app:iss_text_align="CENTER"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title_judul"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_judul"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:elevation="4dp" />
 
+        <!-- Footer Section -->
         <LinearLayout
             android:id="@+id/footer"
             android:layout_width="match_parent"
@@ -83,7 +89,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/image_slider"
+            app:layout_constraintTop_toBottomOf="@id/image_slider"
             app:layout_constraintVertical_bias="1.0">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,6 +99,7 @@
                 android:layout_marginTop="22dp"
                 android:layout_marginEnd="32dp">
 
+                <!-- Footer content remains unchanged -->
                 <ImageView
                     android:id="@+id/logo_diskominfo_footer"
                     android:layout_width="80dp"
@@ -112,8 +119,8 @@
                     android:contentDescription="@string/icon_x"
                     android:scaleType="fitXY"
                     android:src="@drawable/icon_x"
-                    app:layout_constraintStart_toStartOf="@+id/logo_diskominfo_footer"
-                    app:layout_constraintTop_toBottomOf="@+id/logo_diskominfo_footer"
+                    app:layout_constraintStart_toStartOf="@id/logo_diskominfo_footer"
+                    app:layout_constraintTop_toBottomOf="@id/logo_diskominfo_footer"
                     tools:ignore="MissingConstraints" />
 
                 <ImageView
@@ -124,8 +131,8 @@
                     android:layout_marginTop="8dp"
                     android:scaleType="fitXY"
                     android:src="@drawable/icon_insta"
-                    app:layout_constraintStart_toStartOf="@+id/imageView3"
-                    app:layout_constraintTop_toBottomOf="@+id/logo_diskominfo_footer"
+                    app:layout_constraintStart_toStartOf="@id/imageView3"
+                    app:layout_constraintTop_toBottomOf="@id/logo_diskominfo_footer"
                     tools:ignore="MissingConstraints" />
 
                 <ImageView
@@ -136,17 +143,17 @@
                     android:contentDescription="TODO"
                     android:scaleType="fitXY"
                     android:src="@drawable/icon_yt"
-                    app:layout_constraintEnd_toEndOf="@+id/logo_diskominfo_footer"
-                    app:layout_constraintTop_toBottomOf="@+id/logo_diskominfo_footer" />
+                    app:layout_constraintEnd_toEndOf="@id/logo_diskominfo_footer"
+                    app:layout_constraintTop_toBottomOf="@id/logo_diskominfo_footer" />
 
                 <ImageView
                     android:layout_width="12dp"
                     android:layout_height="12dp"
                     android:layout_marginTop="8dp"
                     android:src="@drawable/icon_linkedin"
-                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
-                    app:layout_constraintStart_toEndOf="@+id/imageView5"
-                    app:layout_constraintTop_toBottomOf="@+id/logo_diskominfo_footer" />
+                    app:layout_constraintEnd_toStartOf="@id/imageView4"
+                    app:layout_constraintStart_toEndOf="@id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@id/logo_diskominfo_footer" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View

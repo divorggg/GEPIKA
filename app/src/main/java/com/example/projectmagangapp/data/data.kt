@@ -16,3 +16,11 @@ data class Kegiatan(
     val description: String,
     val image: String
 ) : Parcelable
+
+
+@Parcelize
+data class YouTubeVideo(
+    val thumbnailUrl: String,
+    val title: String,
+    val videoId: String
+) : Parcelable

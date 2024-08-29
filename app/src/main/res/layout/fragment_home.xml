@@ -5,6 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
+    
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -16,32 +23,133 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/img_bg_home"
-                android:layout_width="match_parent"
-                android:layout_height="305dp"
-                android:contentDescription="@string/bg_home"
-                android:scaleType="fitXY"
-                android:src="@drawable/bg_img_home"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_home_title"
-                android:layout_width="match_parent"
-                android:layout_height="306dp"
-                android:background="@drawable/background_gradient"
-                android:gravity="start"
-                android:padding="24dp"
-                android:text="@string/Welcome_Text"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/img_bg_home"
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="RtlSymmetry" />
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/welcomeSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/img_bg_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="305dp"
+                    android:contentDescription="@string/bg_home"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tugu_keris"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_home_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="306dp"
+                    android:background="@drawable/background_gradient"
+                    android:gravity="start"
+                    android:padding="24dp"
+                    android:letterSpacing="0.01"
+                    android:text="@string/Welcome_Text"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_bg_home"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_person1"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_home_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintWidth_percent="0.9">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <!-- LinearLayout untuk gambar dan teks pertama -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/iv_person1"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_margin="8dp"
+                                android:scaleType="centerCrop"
+                                android:src="#D9D9D9" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/PJ_walkot"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textSize="9sp" />
+
+                        </LinearLayout>
+
+                        <!-- LinearLayout untuk gambar dan teks kedua -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/iv_person2"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_margin="8dp"
+                                android:scaleType="centerCrop"
+                                android:src="#D9D9D9" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/Sekda"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:textSize="9sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:id="@+id/Lr_berita"
@@ -49,13 +157,13 @@
                 android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:orientation="horizontal"
-                app:layout_constraintTop_toBottomOf="@id/img_bg_home"
+                app:layout_constraintTop_toBottomOf="@id/welcomeSection"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
                 <TextView
-                    android:id="@+id/tv_berita"
-                    android:layout_width="97dp"
+
+                    android:layout_width="130dp"
                     android:layout_height="wrap_content"
                     android:paddingStart="16dp"
                     android:paddingEnd="16dp"
@@ -107,6 +215,8 @@
                     android:layout_width="143dp"
                     android:layout_height="wrap_content"
                     android:paddingTop="16dp"
+                    android:clickable="true"
+                    android:foreground="@drawable/ripple_effect"
                     android:paddingBottom="16dp"
                     android:text="@string/open_berita"
                     android:textColor="#A1000000"
@@ -128,7 +238,7 @@
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/viewPager"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="150dp"
                     app:layout_constraintTop_toBottomOf="@id/Rv_Kegiatan"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -248,11 +358,15 @@
 
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_call_center"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:foreground="@drawable/ripple_effect"
                         android:background="@color/white"
                         android:layout_marginTop="32dp"
                         android:elevation="12dp"
+                        android:clickable="true"
+                        android:focusable="true"
                         app:cardCornerRadius="12dp">
 
                         <ImageView
@@ -261,19 +375,24 @@
                             android:layout_height="28dp"
                             android:layout_marginBottom="8dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/icon_whatsapp"/>
+                            android:src="@drawable/icon_call_center"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
+                            android:textSize="14sp"
                             android:layout_gravity="center"
                             android:layout_marginTop="20dp"
-                            android:text="WhatsApp"/>
+                            android:text="@string/call_center"/>
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_whatsapp"
                         android:layout_width="80dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="@drawable/ripple_effect"
                         android:layout_height="80dp"
                         android:background="@color/white"
                         android:layout_marginTop="32dp"
@@ -284,24 +403,29 @@
 
                         <ImageView
                             android:id="@+id/lokasi"
-                            android:layout_width="28dp"
-                            android:layout_height="28dp"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
                             android:layout_marginBottom="8dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/icon_whatsapp"/>
+                            android:src="@drawable/icon_whatsapp_home"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
+                            android:textSize="14sp"
                             android:layout_gravity="center"
                             android:layout_marginTop="20dp"
-                            android:text="WhatsApp"/>
+                            android:text="@string/whatsapp"/>
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/btn_location"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="@drawable/ripple_effect"
                         android:background="@color/white"
                         android:layout_marginTop="32dp"
                         android:layout_marginStart="32dp"
@@ -315,14 +439,15 @@
                             android:layout_height="28dp"
                             android:layout_marginBottom="8dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/icon_whatsapp"/>
+                            android:src="@drawable/icon_location"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="20dp"
+                            android:textSize="14sp"
                             android:layout_gravity="center"
                             android:layout_marginTop="20dp"
-                            android:text="WhatsApp"/>
+                            android:text="@string/lokasi"/>
 
                     </androidx.cardview.widget.CardView>
 
@@ -371,5 +496,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.core.widget.NestedScrollView>
-
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

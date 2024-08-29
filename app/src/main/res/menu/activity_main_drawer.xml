@@ -13,13 +13,18 @@
             android:icon="@drawable/purpose"
             android:title="@string/Visi_misi" />
         <item
-            android:id="@+id/nav_struktur"
-            android:icon="@drawable/icon_organization_structure"
-            android:title="@string/Struktur_organisasi"/>
-        <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/icon_gallery"
             android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_struktur"
+            android:icon="@drawable/icon_organization_structure"
+            android:title="@string/Struktur_organisasi"/>
+
+        <item
+            android:id="@+id/nav_buku_panduan"
+            android:icon="@drawable/icon_bukpan"
+            android:title="@string/buku_panduan" />
 
     </group>
 </menu>

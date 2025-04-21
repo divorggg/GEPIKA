@@ -1,7 +1,7 @@
 
 # GEPIKA - Gerbang Profil Instansi Kota Jambi
 
-Selamat datang di **GEPIKA**, aplikasi resmi untuk profil instansi di Kota Jambi. GEPIKA menyediakan informasi terkini, berita, dan wawasan sejarah tentang berbagai instansi di dalam kota. Tetap terinformasi dan terhubung dengan perkembangan terbaru dari pemerintah daerah Anda.
+Selamat datang di **GEPIKA**, Project magang yang dibuat oleh tim dari universitas jambi untuk keperluan magang di Dinas Dinas Komunikasi dan Informatika Kota Jambi (DISKOMINFO). GEPIKA menyediakan informasi terkini, berita, dan wawasan sejarah tentang berbagai instansi di dalam kota. Tetap terinformasi dan terhubung dengan perkembangan terbaru dari pemerintah daerah Anda.
 
 ## Fitur
 
